@@ -19,7 +19,7 @@ From GitHub:
 
 TODO
 ```python
-pip install 'git+https://github.com/AniKhachatryan/Wemanity_CKD.git'
+pip install 'git+https://github.com/AniKhachatryan/ckd.git'
 ```
 
 
