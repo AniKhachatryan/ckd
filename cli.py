@@ -27,9 +27,15 @@ def cli_func(input_data: str = None, target : str = None, model : str = 'lr', pr
 
     """
     if input_data:
+        # del
+        print('input_data was provided')
         if target:
+            # del
+            print('target is provided separately')
             input_data = (input_data, target)
     else:
+        # del
+        print('no input_data provided, setting to default')
         input_data = 'default'
 
     print(input_data)
