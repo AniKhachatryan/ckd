@@ -42,5 +42,6 @@ def cli_func(input_data: str = None, target : str = None, model : str = 'lr', pr
     predict_ckd(input_data=input_data, model=model, preprocess=preprocess)
 
 
-if __name__ == '__main__':
+def main():
     fire.Fire(cli_func)
+
