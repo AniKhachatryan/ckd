@@ -36,4 +36,4 @@ def cli_func(input_data: str = None, target: str = None, model: str = 'lr', prep
 
 
 def main():
-    fire.Fire(cli_func())
+    fire.Fire(cli_func)
