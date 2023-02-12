@@ -8,7 +8,7 @@ setup(
     packages=find_packages(include=['ckd', 'ckd.*']),
     install_requires=['scikit-learn==1.2.0', 'pandas>=1.5.3', 'fire>=0.5.0'],
     scripts=['cli.py'],
-    entry_points={'console_scripts': ['ckd=cli:cli_func']},
+    entry_points={'console_scripts': ['ckd=cli:main']},
     package_dir={'ckd': 'ckd'},
     package_data={'ckd': ['files/data/*', 'files/models/*']}
 )
