@@ -68,9 +68,9 @@ def load_data(input_data, config):
     Returns
     -------
     x : pandas.DataFrame
-        DataFrame containing predictor variable data.
-    y : pandas.DataFrame
-        DataFrame containing target variable data.
+        pandas.DataFrame containing predictor variable data.
+    y : pandas.DataFrame or None
+        pandas.DataFrame containing target variable data or None if target value is not provided.
     """
 
     # if 'default', load default data

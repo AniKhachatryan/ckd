@@ -57,6 +57,10 @@ def predict_ckd(input_data='default', model='LR', preprocess=False,
     # input_data is either 'default', a path, a pandas.DataFrame
     x, y = load_data(input_data, config)
 
+    # if target data is not available, set evaluate_predictions to false
+    if y is None:
+        evaluate_predictions = False
+
     # check that data has the right format (columns)
     assert check_data(x, config, preprocessed=not preprocess)
 

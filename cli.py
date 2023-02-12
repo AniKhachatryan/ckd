@@ -9,7 +9,7 @@ import fire
 from ckd import predict_ckd
 
 
-def cli_func(input_data: str = None, target : str = None, model : str = 'lr', preprocess: bool = False):
+def cli_func(input_data: str = None, target: str = None, model: str = 'lr', preprocess: bool = False):
     """
     Add command line functionality.
 
