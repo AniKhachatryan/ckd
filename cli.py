@@ -32,6 +32,7 @@ def cli_func(input_data: str = None, target : str = None, model : str = 'lr', pr
     else:
         input_data = 'default'
 
+    print(input_data)
     predict_ckd(input_data=input_data, model=model, preprocess=preprocess)
 
 
