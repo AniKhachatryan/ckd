@@ -25,9 +25,9 @@ def load_test_data(config, preprocessed=True):
     Returns
     -------
     x : pandas.DataFrame
-        DataFrame containing predictor variable data.
+        pandas.DataFrame containing predictor variable data.
     y : pandas.DataFrame
-        DataFrame containing target variable data.
+        pandas.DataFrame containing target variable data.
     """
 
     # load x
