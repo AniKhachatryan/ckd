@@ -1,6 +1,8 @@
 # ckd
-ckd is a Python library that provides functionality, default train/test data, and pre-trained models to predict CKD status from measurement and/or biomarker data.
+ckd is a Python library that provides functionality, default train/test data, and pre-trained models to predict Chronic Kidney Disease status from measurement and/or biomarker data.
 
+## Methods
+For information about model development, see the jupyter notebook at ckd/notebooks/CKD_AniKh_Wemanity.ipynb
 
 ## Requirements
 - pandas (version used: 1.5.3, not tested for other versions)
@@ -32,7 +34,7 @@ The _input_data_ parameter can be either
 - 'default' (the default argument value)
 - a pandas.DataFrame object that may or may not contain the target variable
 - a path to a _.csv_ file that may or may not contain the target variable
-- a tuple or list of paths to two _.csv_ files, where the second one contains the target variable 
+- a tuple or list of paths to two _.csv_ files, where the second one contains the target variable. 
 
 It is not necessary to provide the target variable, in which case only the predictions will be returned.
 
@@ -41,20 +43,20 @@ If the input data is not already preprocessed, it is necessary to set the argume
 The _model_ parameter can be either
 - a sklearn.base.BaseEstimator object
 - one of {'lr', 'rf', 'rfc'} (case-insensitive), where 'lr' stands for Logistic Regression and 'rf' and 'rfc' stand for Random Forest
-- a valid path to a .pkl object of class sklearn.base.BaseEstimator 
+- a valid path to a .pkl object of class sklearn.base.BaseEstimator. 
 
-It is necessary that the column names of the input data to match the column names that the model expects. The _ckd.Config_ class provides default values for the column names but in case the user-provided data and the model have different column names, it should be provided through the _config_ argument (see Usage Examples).
+It is necessary that the column names of the input data to match the column names the model expects. The _ckd.Config_ class provides default values for the column names but in case the user-provided data and the model have different column names, it should be provided through the _config_ argument (see Usage Examples).
 
 **Output**: 
 
-The _ckd.predict_ckd()_ function returns:
+The _ckd.predict_ckd()_ function returns
 - predictions as numpy.ndarray
 - performance metrics as dict (only if target values are provided)
   - accuracy
   - sensitivity/recall
   - specificity
   - precision
-  - confusion matrix
+  - confusion matrix.
 
 ### Call _ckd_ from the command line
 
@@ -62,7 +64,7 @@ The _ckd_ package also provides a command line interface, but the functionality 
 
 More specifically, 
 - it does not make sense to use the command line interface without providing the target variable as no output will be generated
-- it is not possible to provide a custom config file, because such functionality hasn't been developed yet.
+- it is not possible to provide a custom config file, because such functionality has not been developed yet.
 
 Please see Usage Examples for more information on how to use the command line interface.
 
@@ -144,7 +146,7 @@ help(ckd.Config)
 
 ### Command line interface usage examples
 
-1. Call _ckd_ from the command line without any arguments. This is equivalent to calling _ckd.predict_ckd()_ from inside Python.
+1. Call _ckd_ from the command line without any arguments. This is equivalent to calling _ckd.predict_ckd()_ without any arguments from inside Python.
 ```bash
 # default
 ckd
@@ -167,9 +169,6 @@ ckd --model 'rf'
 # provide custom model
 ckd --model '/path/to/model.pkl'
 ```
-
-## Methods
-For information about model development, see the jupyter notebook at ckd/notebooks/CKD_AniKh_Wemanity.ipynb
 
 ## Support
 Do not hesitate to contact Ani (ani.d.khachatryan@gmail.com) for any questions related to this Python library.
